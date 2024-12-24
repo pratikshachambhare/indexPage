@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SearchingFarmer</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+
+/* Add your CSS styles here */
+.farmer, .customer {
+    position:absolute;
+    bottom:0;
+    height: 100px;
+    width: 100px;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; /* Keeps element in the end state of animation */
+    opacity: 0; /* Initially hidden */
+}
+
+.farmer img, .customer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.farmer {
+    left: 2.5%;
+    animation-name: farmerAnimation;
+}
+
+.customer {
+    right: 20%;
+    animation-name: customerAnimation;
+}
+
+@keyframes farmerAnimation {
+    0% {
+        bottom: 0;
+        opacity: 0; /* Hidden at start */
+    }
+    100% {
+        bottom: 72%;
+        opacity: 1; /* Fully visible at end */
+    }
+}
+
+@keyframes customerAnimation {
+    0% {
+        bottom: 0;
+        opacity: 0; /* Hidden at start */
+    }
+    100% {
+        bottom: 50%;
+        opacity: 1; /* Fully visible at end */
+    }
+}
+
+.navbar {
+    text-align:center;
+    border-radius: 5px;
+}
+
+.navbar ul {
+    overflow: auto;
+    text-align: center;
+}
+
+.navbar li {
+    text-align: center;
+    float:right;
+    list-style: none;
+    margin: 13px 20px;
+}
+
+.navbar li a {
+    padding: 10px 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a {
+    color:white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight:bold;
+    text-align:center;
+    transition: background-color 0.3s; /* Add transition effect */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background on hover */
+    cursor:pointer;
+}
+
+body {
+    background-image: url("image/ind.jpg");
+    height:800px;
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    position:static;
+    font-size: larger;   
+}
+
+#mydiv {
+    color:white;
+    text-align:left;
+    font-style:italic;
+    font-size: 100px;
+    margin-top: 0PX;
+    margin-left:50px; 
+    animation: fadeInLeft 2.5s ease-in-out; /* Animation for fading in from left */
+}
+
+#div {
+    text-align:center;
+    color:white;
+    background-color:green;
+    font-weight:2px;
+    font-style:italic;
+    font-size: 30px;
+    margin-left: 600px;
+    animation: fadeInRight 2.5s ease-in-out; /* Animation for fading in from right */
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <ul>
+        <li><i class="fa fa-shopping-basket" style="color: white;"></i><a href="login.html">SHOP FROM US-></a></li>
+     
+    </ul>
+</nav>
+
+<div id="mydiv">
+    <u>
+        <b>O</b>rganic</b>Delight<b>S</b>
+    </u>
+</div>
+<div id="div">
+    <div>
+        <i><b>Find Local <b>F</b>armers for Fresh,Organic Food Near You!</b></i>
+    </div>
+</div>
+
+<div class="farmer">
+      <img src="image/logo.jpeg" alt="Farmer">
+    </div>
+<!-- <div class="customer">
+      <img src="customer_image.jpg" alt="Customer">
+    </div>
+ -->
+
+</body>
+</html>
